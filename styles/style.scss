@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=M+PLUS+Rounded+1c:wght@700&display=swap");
+
+$bg-color: hsl(209, 37%, 10%);
+$font-generalSize: 1.25em;
+$font-Mont: "Montserrat", sans-serif;
+$font-Round: "M PLUS Rounded 1c", sans-serif;
+
+// Colors
+$blueish: hsl(220, 74%, 53%);
+$whiteish: hsl(0, 0%, 90%);
+
+@mixin rectangularPadding {
+  padding-block: 0.35rem;
+  padding-inline: 0.85rem;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font-Mont;
+}
+
+.title {
+  text-align: center;
+  color: $whiteish;
+  font-weight: 400;
+  margin-top: 4.75rem;
+  font-size: 2.55em;
+
+  span {
+    font-family: $font-Round;
+    font-size: 3.15rem;
+    color: $blueish;
+  }
+}
+
+.taskInput {
+  text-align: center;
+
+  input {
+    width: 50vw;
+    font-size: $font-generalSize;
+    @include rectangularPadding();
+    border-radius: 0.35rem;
+    border: none;
+  }
+
+  .btn {
+    font-size: 1.25em;
+    @include rectangularPadding();
+    background-color: $blueish;
+
+    border-radius: 0.35rem;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.todos {
+  text-align: center;
+  color: $whiteish;
+}

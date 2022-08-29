@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=M+PLUS+Rounded+1c:wght@700&display=swap");
+body {
+  background-color: hsl(209deg, 37%, 10%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: hsl(0deg, 0%, 90%);
+  font-weight: 400;
+  margin-top: 4.75rem;
+  font-size: 2.55em;
+}
+.title span {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 3.15rem;
+  color: hsl(220deg, 74%, 53%);
+}
+
+.taskInput {
+  text-align: center;
+}
+.taskInput input {
+  width: 50vw;
+  font-size: 1.25em;
+  padding-block: 0.35rem;
+  padding-inline: 0.85rem;
+  border-radius: 0.35rem;
+  border: none;
+}
+.taskInput .btn {
+  font-size: 1.25em;
+  padding-block: 0.35rem;
+  padding-inline: 0.85rem;
+  background-color: hsl(220deg, 74%, 53%);
+  border-radius: 0.35rem;
+  border: none;
+  cursor: pointer;
+}
+
+.todos {
+  text-align: center;
+  color: hsl(0deg, 0%, 90%);
+}/*# sourceMappingURL=style.css.map */
