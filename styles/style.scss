@@ -4,13 +4,14 @@ $bg-color: hsl(209, 37%, 10%);
 $font-generalSize: 1.25em;
 $font-Mont: "Montserrat", sans-serif;
 $font-Round: "M PLUS Rounded 1c", sans-serif;
+$style-Round: 0.35rem;
 
 // Colors
 $blueish: hsl(220, 74%, 53%);
 $whiteish: hsl(0, 0%, 90%);
 
 @mixin rectangularPadding {
-  padding-block: 0.35rem;
+  padding-block: 0.45rem;
   padding-inline: 0.85rem;
 }
 
@@ -40,8 +41,9 @@ body {
     width: 50vw;
     font-size: $font-generalSize;
     @include rectangularPadding();
-    border-radius: 0.35rem;
+    border-radius: $style-Round;
     border: none;
+    outline: none;
   }
 
   .btn {
@@ -49,13 +51,60 @@ body {
     @include rectangularPadding();
     background-color: $blueish;
 
-    border-radius: 0.35rem;
+    border-radius: $style-Round;
     border: none;
     cursor: pointer;
+    margin-left: 0.35rem;
   }
 }
 
 .todos {
-  text-align: center;
+  margin: 0 auto;
   color: $whiteish;
+  width: 58vw;
+  transform: translateX(-1.75rem);
+
+  .eachTodo {
+    background-color: hsla(220 25% 50%/0.9);
+    @include rectangularPadding();
+    border-radius: $style-Round;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    input[type="checkbox"] {
+      /* Double-sized Checkboxes */
+      -ms-transform: scale(2); /* IE */
+      -moz-transform: scale(2); /* FF */
+      -webkit-transform: scale(2); /* Safari and Chrome */
+      -o-transform: scale(2); /* Opera */
+      transform: scale(2);
+      padding: 10px;
+      margin-right: 2rem;
+      cursor: pointer;
+    }
+
+    div > button {
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      margin-inline: 0.5rem;
+
+      border-radius: $style-Round;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(145deg, #f61b1b, #cf1717);
+      box-shadow: 20px 20px 60px #c4151575,
+        -20px -20px 60px hsl(0, 100%, 56%, 0.5);
+      transition: all 0.25s ease-in;
+
+      &:active {
+        background: #e61919;
+        box-shadow: inset 20px 20px 60px #c4151575,
+          inset -20px -20px 60px #ff1d1d;
+      }
+    }
+  }
 }

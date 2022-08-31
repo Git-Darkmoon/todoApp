@@ -23,22 +23,59 @@ body {
 .taskInput input {
   width: 50vw;
   font-size: 1.25em;
-  padding-block: 0.35rem;
+  padding-block: 0.45rem;
   padding-inline: 0.85rem;
   border-radius: 0.35rem;
   border: none;
+  outline: none;
 }
 .taskInput .btn {
   font-size: 1.25em;
-  padding-block: 0.35rem;
+  padding-block: 0.45rem;
   padding-inline: 0.85rem;
   background-color: hsl(220deg, 74%, 53%);
   border-radius: 0.35rem;
   border: none;
   cursor: pointer;
+  margin-left: 0.35rem;
 }
 
 .todos {
-  text-align: center;
+  margin: 0 auto;
   color: hsl(0deg, 0%, 90%);
+  width: 58vw;
+  transform: translateX(-1.75rem);
+}
+.todos .eachTodo {
+  background-color: hsla(220deg, 25%, 50%, 0.9);
+  padding-block: 0.45rem;
+  padding-inline: 0.85rem;
+  border-radius: 0.35rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.todos .eachTodo input[type=checkbox] {
+  /* Double-sized Checkboxes */ /* IE */ /* FF */ /* Safari and Chrome */ /* Opera */
+  transform: scale(2);
+  padding: 10px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.todos .eachTodo div > button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  margin-inline: 0.5rem;
+  border-radius: 0.35rem;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #f61b1b, #cf1717);
+  box-shadow: 20px 20px 60px rgba(196, 21, 21, 0.4588235294), -20px -20px 60px hsla(0deg, 100%, 56%, 0.5);
+  transition: all 0.25s ease-in;
+}
+.todos .eachTodo div > button:active {
+  background: #e61919;
+  box-shadow: inset 20px 20px 60px rgba(196, 21, 21, 0.4588235294), inset -20px -20px 60px #ff1d1d;
 }/*# sourceMappingURL=style.css.map */
