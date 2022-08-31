@@ -16,18 +16,27 @@
     <h1 class="title">todo<span>App</span></h1>
     <form action="" method="post">
       <div class="taskInput">
-        <input type="text" placeholder="What to do..." />
-        <button class="btn">Add</button>
+        <input
+          type="text"
+          autocomplete="off"
+          placeholder="What to do..."
+          id="userInput"
+        />
+        <button class="btn" id="inputBtn">Add</button>
       </div>
       <div class="todos">
-        <ul style="list-style: none">
+        <ul class="myUl" style="list-style: none">
           <li class="eachTodo">
-            <div><input type="checkbox" name="" id="">Do Groceries</input></div>
+            <div>
+              <input type="checkbox" name="" id="taskCheck" />
+              <label for="taskCheck">Do Groceries</label>
+            </div>
             <div><button>X</button></div>
           </li>
         </ul>
       </div>
     </form>
-    <div class="container"></div>
+    <!-- <div class="container"></div> -->
   </body>
+  <script src="app.js"></script>
 </html>

@@ -56,6 +56,7 @@ body {
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  margin-block: 1.15rem;
 }
 .todos .eachTodo input[type=checkbox] {
   /* Double-sized Checkboxes */ /* IE */ /* FF */ /* Safari and Chrome */ /* Opera */
@@ -63,6 +64,10 @@ body {
   padding: 10px;
   margin-right: 2rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todos .eachTodo input[type=checkbox]:checked {
+  box-shadow: 0 0 0 3px rgba(0, 255, 55, 0.578);
 }
 .todos .eachTodo div > button {
   padding-inline: 1rem;
