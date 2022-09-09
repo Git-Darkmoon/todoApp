@@ -46,6 +46,12 @@ body {
   width: 58vw;
   transform: translateX(-1.75rem);
 }
+.todos .myUl .eachTodo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .todos .eachTodo {
   background-color: hsla(220deg, 25%, 50%, 0.9);
   padding-block: 0.45rem;
@@ -67,7 +73,7 @@ body {
   transition: all 0.2s ease;
 }
 .todos .eachTodo input[type=checkbox]:checked {
-  box-shadow: 0 0 0 3px rgba(0, 255, 55, 0.578);
+  box-shadow: 0 0 0 3px hsla(133deg, 100%, 50%, 0.6);
 }
 .todos .eachTodo div > button {
   padding-inline: 1rem;
