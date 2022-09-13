@@ -73,20 +73,40 @@ body {
   transition: all 0.2s ease;
 }
 .todos .eachTodo input[type=checkbox]:checked {
-  box-shadow: 0 0 0 3px hsla(133deg, 100%, 50%, 0.6);
+  box-shadow: 0 0 0 3px hsla(0deg, 0%, 52%, 0.6);
 }
 .todos .eachTodo div > button {
-  padding-inline: 1rem;
+  padding-inline: 0.75rem;
   padding-block: 0.5rem;
   margin-inline: 0.5rem;
   border-radius: 0.35rem;
   border: none;
   cursor: pointer;
-  background: linear-gradient(145deg, #f61b1b, #cf1717);
-  box-shadow: 20px 20px 60px rgba(196, 21, 21, 0.4588235294), -20px -20px 60px hsla(0deg, 100%, 56%, 0.5);
-  transition: all 0.25s ease-in;
+  background: linear-gradient(145deg, hsl(0deg, 92%, 50%), hsl(0deg, 80%, 40%));
+  transition: all 0.25s ease;
+}
+.todos .eachTodo div > button:hover {
+  transform: scale(1.1);
 }
 .todos .eachTodo div > button:active {
-  background: #e61919;
-  box-shadow: inset 20px 20px 60px rgba(196, 21, 21, 0.4588235294), inset -20px -20px 60px #ff1d1d;
+  transform: scale(0.9);
+}
+.todos .belowMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2.5rem;
+}
+.todos .belowMenu .clear {
+  color: hsl(220deg, 74%, 53%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.todos .belowMenu .clear:hover {
+  transform: scale(1.05);
+  color: hsl(220deg, 74%, 56%);
 }/*# sourceMappingURL=style.css.map */

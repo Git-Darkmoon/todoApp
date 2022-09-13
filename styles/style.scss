@@ -98,26 +98,46 @@ body {
     }
 
     input[type="checkbox"]:checked {
-      box-shadow: 0 0 0 3px hsla(133, 100%, 50%, 0.6);
+      box-shadow: 0 0 0 3px hsla(0, 0%, 52%, 0.6);
     }
 
     div > button {
-      padding-inline: 1rem;
+      padding-inline: 0.75rem;
       padding-block: 0.5rem;
       margin-inline: 0.5rem;
 
       border-radius: $style-Round;
       border: none;
       cursor: pointer;
-      background: linear-gradient(145deg, #f61b1b, #cf1717);
-      box-shadow: 20px 20px 60px #c4151575,
-        -20px -20px 60px hsl(0, 100%, 56%, 0.5);
-      transition: all 0.25s ease-in;
+      background: linear-gradient(145deg, hsl(0, 92%, 50%), hsl(0, 80%, 40%));
+
+      transition: all 0.25s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
 
       &:active {
-        background: #e61919;
-        box-shadow: inset 20px 20px 60px #c4151575,
-          inset -20px -20px 60px #ff1d1d;
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .belowMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+
+    .clear {
+      color: $blueish;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+
+      &:hover {
+        transform: scale(1.05);
+        color: hsl(220, 74%, 56%);
       }
     }
   }

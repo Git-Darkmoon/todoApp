@@ -1,12 +1,8 @@
 const todoContainer = document.querySelector(".myUl")
 const userInput = document.getElementById("userInput")
 const inputBtn = document.getElementById("inputBtn")
-const checkInput = document.querySelectorAll("#taskCheck")
-
+let checkInput = document.querySelectorAll("input[type=checkbox]")
 let todoCount = 0
-
-let newTodo = document.createElement("li")
-newTodo.classList.add("eachTodo")
 
 inputBtn.addEventListener("click", (e) => {
   e.preventDefault()
@@ -14,25 +10,32 @@ inputBtn.addEventListener("click", (e) => {
     let newTodo = document.createElement("li")
     newTodo.classList.add("eachTodo")
     newTodo.innerHTML = `
-    <input type="checkbox" name="" id="taskCheck" />
-    <label for="taskCheck">${userInput.value.trim()}</label>
-    <div><button>X</button></div>
+    <div>
+      <input type="checkbox" name="" id="taskCheck" />${userInput.value.trim()}
+    </div>
+    <div>
+      <button><i class="fa-solid fa-xmark"></i></button>
+    </div>
 `
     todoContainer.appendChild(newTodo)
   } else {
     alert("Must enter a task to add !")
   }
   userInput.value = ""
+  checkInput = document.querySelectorAll("input[type=checkbox]")
 })
 
 checkInput.forEach((liInput) => {
   liInput.addEventListener("change", (e) => {
+    console.log(checkInput)
+
     if (e.currentTarget.checked == true) {
-      console.log("Cool")
-      liInput.nextElementSibling.style.textDecoration =
-        "line-through solid #00b32599 35%"
-    } else {
-      liInput.nextElementSibling.style.textDecoration = "none"
+      console.log("Is checked")
     }
   })
 })
+
+// setInterval(() => {
+//   checkInput = document.querySelectorAll("input[type=checkbox]")
+//   console.log(checkInput)
+// }, 15000)
